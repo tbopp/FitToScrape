@@ -26,6 +26,14 @@ app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
 
+// Setup Handlebars
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({
+    defaultLayout: "main"
+}));
+app.set("view engine", "handlebars");
+
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
@@ -57,6 +65,7 @@ app.get("/scrape", function(req, res) {
           .attr("href");
   
         // Create a new Article using the `result` object built from scraping
+        if (result.title)
         db.Article.create(result)
           .then(function(dbArticle) {
             // View the added result in the console
