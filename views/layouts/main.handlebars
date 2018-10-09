@@ -3,31 +3,39 @@
 
 <head>
     <meta charset="UTF-8">
+
     {{!-- Bootstrap CDN --}}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
     {{!-- Google Fonts CDN --}}
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Tamma" rel="stylesheet">
-    {{!-- Link to custom CSS --}}
-    <link rel="stylesheet" href="/assets/css/style.css" type="text/css">
+    {{!-- <link href="https://fonts.googleapis.com/css?family=Baloo+Tamma" rel="stylesheet"> --}}
+    
+    {{!-- Custom CSS --}}
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
+
     {{!-- jQuery library --}}
     <script src="https://code.jquery.com/jquery.js"></script>
-    <title>Eat-Da-Burger!</title>
+
+    <title>Fit to Scrape</title>
 </head>
 
 <body>
     <div class="container-fluid text-center main-text">
         <div class="row">
             <div class="col-md-12">
-                <img src="/assets/img/burger.png" class="rounded" class="img-fluid" alt="Eat-Da-Burger!">
-                <h1 class="display-4">EAT-DA-BURGER!</h1>
-                <p class="lead">Order a burger and devour it before someone else does.</p>
+                {{!-- <img src="/assets/img/burger.png" class="rounded" class="img-fluid" alt="Eat-Da-Burger!"> --}}
+                <h1 class="display-3">Fit to Scrape</h1>
+                <h2 class-"display-4">News Articles from ...<h2>
             </div>
         </div>
     </div>
+
+    <div class="wrapper">
     {{{ body }}}
+    </div>
+
     {{!-- Logic file for AJAX calls --}}
-    <script type="text/javascript" src="/assets/js/burgers.js"></script>
+    {{!-- <script type="text/javascript" src="/public/assets/js/app.js"></script> --}}
 </body>
 
 </html>
