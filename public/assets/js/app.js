@@ -13,12 +13,13 @@
 //   res.render("index", articleObj);
 // });
 
-
-// Whenever someone clicks a p tag
-$(document).on("click", "p", function () {
+// Whenever someone clicks a view notes button
+$(".view-notes").on("click", function () {
   // Empty the notes from the note section
   $("#notes").empty();
-  // Save the id from the p tag
+  $("#notes").collapse().show();
+
+  // Save the id from the table row
   var thisId = $(this).attr("data-id");
 
   // Now make an ajax call for the Article
@@ -30,9 +31,9 @@ $(document).on("click", "p", function () {
     .then(function (data) {
       console.log(data);
       // The title of the article
-      $("#notes").append("<h2>" + data.title + "</h2>");
+      $("#notes").append("<p><b>" + data.title + "</b></p>");
       // An input to enter a new title
-      $("#notes").append("<input id='titleinput' name='title' >");
+      $("#notes").append("<input id='titleinput' name='title'>");
       // A textarea to add a new note body
       $("#notes").append("<textarea id='bodyinput' name='body'></textarea>");
       // A button to submit a new note, with the id of the article saved to it
