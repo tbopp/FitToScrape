@@ -2,6 +2,10 @@ body {
   background-color: white
 }
 
+.notes-b {
+  display:none
+}
+
 #wrapper {
   width: 960px;
   margin-left: auto;
