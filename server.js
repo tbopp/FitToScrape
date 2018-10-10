@@ -26,7 +26,9 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 // Make public a static folder
-app.use(express.static("public"));
+app.use(express.static((__dirname, 'public')));
+app.use(express.static('models'));
+app.use(express.static('views'));
 
 // Setup Handlebars
 var exphbs = require("express-handlebars");
