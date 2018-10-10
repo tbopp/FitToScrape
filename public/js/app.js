@@ -14,7 +14,7 @@
 // });
 
 // Whenever someone clicks a View Notes button:
-$("#view-notes").on("click", function () {
+$(document).on("click", "p", function () {
   // Empty the notes from the note section
   $("#notes").empty();
   // Save the id from the p tag
