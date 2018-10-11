@@ -17,11 +17,9 @@
                             <p data-id={{this._id}}>{{this.title}}</p>
                         </td>
                         <td><a href="{{this.link}}" target="_blank">Read it!</a></td>
-                        <td>
-                            <button class="btn btn-primary view-notes" type="button" data-id={{this._id}}>
-                                View Notes
-                            </button>
-                            <div class="card card-body notes-b" data-id={{this._id}}>
+                        <td><button class="btn btn-primary view-notes" type="button" data-id={{this._id}}>
+                                View Notes</button>
+                            <div class="card card-body notes" data-id={{this._id}}>
                                 <p><b>ID:</b>{{this._id}}
                                     <b>Notes:</b>{{this.note}}</p>
                             </div>
