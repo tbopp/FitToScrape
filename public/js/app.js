@@ -13,7 +13,7 @@ $(function() {
     console.log(thisId);
 
     // Toggle show/hide of notes div
-    $("[data-id=" + thisId + "]").toggle(200);
+    $("[data-id=" + thisId + "]").toggle(700);
 
     $.ajax("/articles/" + thisId, {
       type: "GET"
@@ -82,12 +82,12 @@ $(function() {
   });
 
   // Event listener for close note button
-  $(document).on("click", "#closenote", async function() {
+  $(document).on("click", "#closenote", function() {
     // Grab the id associated with the article from the submit button
     const thisId = $(this).attr("data-id");
 
     // Toggle show/hide of notes div
-    await $("[data-id=" + thisId + "]").toggle(200);
+    $("[data-id=" + thisId + "]").toggle(700);
 
     // Also, remove the values entered in the input and textarea for note entry
     $("#titleinput").val("");
