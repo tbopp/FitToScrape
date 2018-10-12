@@ -13,7 +13,7 @@ $(function() {
     console.log(thisId);
 
     // Toggle show/hide of notes div
-    $("[data-id=" + thisId + "]").toggle(600);
+    $("[data-id=" + thisId + "]").toggle(200);
 
     $.ajax("/articles/" + thisId, {
       type: "GET"
@@ -87,7 +87,7 @@ $(function() {
     const thisId = $(this).attr("data-id");
 
     // Toggle show/hide of notes div
-    await $("[data-id=" + thisId + "]").toggle(600);
+    await $("[data-id=" + thisId + "]").toggle(200);
 
     // Also, remove the values entered in the input and textarea for note entry
     $("#titleinput").val("");
