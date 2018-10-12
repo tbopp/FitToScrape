@@ -22,11 +22,11 @@ $(function() {
       $("#notes").append("<p class='h'><b>Title: </b>" + data.title + "</p>");
       // An input to enter a new title
       $("#notes").append(
-        "<input id='titleinput' class='form-control' name='title'>"
+        "<input id='titleinput' class='form-control' placeholder='Note Title...' name='title'>"
       );
       // A textarea to add a new note body
       $("#notes").append(
-        "<textarea class='form-control' id='bodyinput' rows='3' name='body'></textarea>"
+        "<textarea class='form-control' id='bodyinput' rows='3' placeholder='Create a note...' name='body'></textarea>"
       );
       // A button to submit a new note, with the id of the article saved to it
       $("#notes").append(
