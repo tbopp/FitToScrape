@@ -2,8 +2,16 @@ body {
   background-color: white
 }
 
+.masthead {
+  padding: 10px;
+}
+
+.tableDiv {
+  margin-top: 20px;
+}
+
 #notes {
-  display:none;
+  display: none;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 
@@ -21,8 +29,9 @@ body {
   height: 700px;
 }
 
-#notes, p.h {
-  margin-bottom: 2px
+#notes,
+p.h {
+  margin-bottom: 2px;
 }
 
 textarea,

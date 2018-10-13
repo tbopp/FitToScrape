@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-10 col-sm-4 offset-md-1">
-            <h2>Latest Articles</h2>
+        <div class="col-md-10 col-sm-4 offset-md-1 tableDiv">
+            <h2 class=>Latest Articles</h2>
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -14,7 +14,7 @@
                     {{#each articles}}
                     <tr>
                         <td>
-                            <p data-id={{this._id}}>{{this.title}}</p>
+                            <p class="lead" data-id={{this._id}}>{{this.title}}</p>
                         </td>
                         <td><a href="{{this.link}}" target="_blank">Read it!</a></td>
                         <td><button class="btn btn-primary" id="view-notes" type="button" data-id={{this._id}}>
